@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--Color Clock-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="color_clock_vc" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" userLabel="Color Clock" customClass="ColorClockViewController" customModule="Half_Past_Blue" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" restorationIdentifier="color_background" translatesAutoresizingMaskIntoConstraints="NO" id="ay0-tL-qYu" userLabel=" color view">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="HH:MM:SS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h4n-yL-4fS">
+                                        <rect key="frame" x="20" y="207" width="560" height="116.5"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="100"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="h4n-yL-4fS" firstAttribute="centerY" secondItem="ay0-tL-qYu" secondAttribute="centerY" id="4nF-ER-CVS"/>
+                                    <constraint firstAttribute="trailing" secondItem="h4n-yL-4fS" secondAttribute="trailing" constant="20" symbolic="YES" id="E5k-kn-DTK"/>
+                                    <constraint firstItem="h4n-yL-4fS" firstAttribute="leading" secondItem="ay0-tL-qYu" secondAttribute="leading" constant="20" symbolic="YES" id="JSg-c8-cu8"/>
+                                    <constraint firstItem="h4n-yL-4fS" firstAttribute="baseline" secondItem="ay0-tL-qYu" secondAttribute="centerY" id="wcX-1h-sZ3"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="4nF-ER-CVS"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="4nF-ER-CVS"/>
+                                        <exclude reference="wcX-1h-sZ3"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ay0-tL-qYu" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="4fT-oS-skW"/>
+                            <constraint firstItem="ay0-tL-qYu" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="5Ks-G5-q67"/>
+                            <constraint firstItem="ay0-tL-qYu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="8PZ-tK-MVr"/>
+                            <constraint firstAttribute="trailing" secondItem="ay0-tL-qYu" secondAttribute="trailing" id="ovC-M8-2Ck"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="colorView" destination="ay0-tL-qYu" id="MZb-Rb-SRk"/>
+                        <outlet property="currentDateLabel" destination="h4n-yL-4fS" id="Xwa-ay-jiq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="459" y="387"/>
+        </scene>
+    </scenes>
+</document>
