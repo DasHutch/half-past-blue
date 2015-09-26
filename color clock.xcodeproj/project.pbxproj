@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		170229C51BB739DD0073F634 /* ColorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170229C41BB739DD0073F634 /* ColorManager.swift */; settings = {ASSET_TAGS = (); }; };
 		1790FD151BB49B4D00C2A21E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1790FD141BB49B4D00C2A21E /* AppDelegate.swift */; };
 		1790FD1A1BB49B4D00C2A21E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1790FD181BB49B4D00C2A21E /* Main.storyboard */; };
 		1790FD1F1BB49B4D00C2A21E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1790FD1D1BB49B4D00C2A21E /* LaunchScreen.storyboard */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		170229C41BB739DD0073F634 /* ColorManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorManager.swift; sourceTree = "<group>"; };
 		1790FD111BB49B4D00C2A21E /* Half Past Blue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Half Past Blue.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1790FD141BB49B4D00C2A21E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1790FD191BB49B4D00C2A21E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 			children = (
 				1790FD141BB49B4D00C2A21E /* AppDelegate.swift */,
 				1790FD4C1BB4B69700C2A21E /* ColorClockViewController.swift */,
+				170229C41BB739DD0073F634 /* ColorManager.swift */,
 				1790FD541BB6012600C2A21E /* Clock.swift */,
 				1790FD4E1BB4C49D00C2A21E /* UIColor+Hexadecimal.swift */,
 				1790FD501BB4E1F800C2A21E /* UIColor+IsLightColor.swift */,
@@ -314,6 +317,7 @@
 				1790FD151BB49B4D00C2A21E /* AppDelegate.swift in Sources */,
 				1790FD511BB4E1F800C2A21E /* UIColor+IsLightColor.swift in Sources */,
 				1790FD4B1BB49C6100C2A21E /* XCGLogger.swift in Sources */,
+				170229C51BB739DD0073F634 /* ColorManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
