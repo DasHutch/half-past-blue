@@ -8,11 +8,6 @@
 
 import UIKit
 
-//NOTE: Create global 'log' instance
-//      this allows, more refined logging
-//      based on build - set log level (verbose, warn, error, etc)
-let log = XCGLogger.defaultInstance()
-
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -51,18 +46,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     // MARK: Setup
     private func setupLogging() {
-        
-        let env = NSProcessInfo.processInfo().environment
-        if env["environment"] == "development" {
-            
-            //NOTE: Development environment, use 'verbose` log level
-            log.setup(.Verbose, showLogLevel: true, showFileNames: true, showLineNumbers: true, writeToFile: nil, fileLogLevel: nil)
-
-        } else {
-            
-            //NOTE: Production environment, use 'warning` log level
-            log.setup(.Warning, showLogLevel: true, showFileNames: true, showLineNumbers: true, writeToFile: nil, fileLogLevel: nil)
-        }
+        Logger.setup()
     }
 }
 
