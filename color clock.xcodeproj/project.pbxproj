@@ -8,13 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		170229C51BB739DD0073F634 /* ColorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170229C41BB739DD0073F634 /* ColorManager.swift */; settings = {ASSET_TAGS = (); }; };
-		174095CE1BB7894B00A350BD /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174095CD1BB7894B00A350BD /* InterfaceController.swift */; };
-		174095D21BB7894B00A350BD /* GlanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174095D11BB7894B00A350BD /* GlanceController.swift */; };
-		174095D41BB7894B00A350BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 174095D31BB7894B00A350BD /* Assets.xcassets */; };
-		174095D91BB7894B00A350BD /* Half Past Blue WatchKit 1 App.app in Resources */ = {isa = PBXBuildFile; fileRef = 174095D81BB7894B00A350BD /* Half Past Blue WatchKit 1 App.app */; };
-		174095DF1BB7894B00A350BD /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 174095DD1BB7894B00A350BD /* Interface.storyboard */; };
-		174095E11BB7894B00A350BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 174095E01BB7894B00A350BD /* Assets.xcassets */; };
-		174095E51BB7894B00A350BD /* Half Past Blue WatchKit 1 Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 174095C91BB7894B00A350BD /* Half Past Blue WatchKit 1 Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		174FCA941BB9126E009909F0 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174FCA931BB9126E009909F0 /* Logger.swift */; settings = {ASSET_TAGS = (); }; };
 		1790FD151BB49B4D00C2A21E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1790FD141BB49B4D00C2A21E /* AppDelegate.swift */; };
 		1790FD1A1BB49B4D00C2A21E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1790FD181BB49B4D00C2A21E /* Main.storyboard */; };
 		1790FD1F1BB49B4D00C2A21E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1790FD1D1BB49B4D00C2A21E /* LaunchScreen.storyboard */; };
@@ -30,20 +24,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		174095DA1BB7894B00A350BD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1790FD091BB49B4D00C2A21E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 174095D71BB7894B00A350BD;
-			remoteInfo = "Half Past Blue WatchKit 1 App";
-		};
-		174095E31BB7894B00A350BD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1790FD091BB49B4D00C2A21E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 174095C81BB7894B00A350BD;
-			remoteInfo = "Half Past Blue WatchKit 1 Extension";
-		};
 		1790FD261BB49B4D00C2A21E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1790FD091BB49B4D00C2A21E /* Project object */;
@@ -67,7 +47,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				174095E51BB7894B00A350BD /* Half Past Blue WatchKit 1 Extension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -76,16 +55,7 @@
 
 /* Begin PBXFileReference section */
 		170229C41BB739DD0073F634 /* ColorManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorManager.swift; sourceTree = "<group>"; };
-		174095C91BB7894B00A350BD /* Half Past Blue WatchKit 1 Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Half Past Blue WatchKit 1 Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		174095CC1BB7894B00A350BD /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
-		174095CD1BB7894B00A350BD /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
-		174095D11BB7894B00A350BD /* GlanceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlanceController.swift; sourceTree = "<group>"; };
-		174095D31BB7894B00A350BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		174095D51BB7894B00A350BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		174095D81BB7894B00A350BD /* Half Past Blue WatchKit 1 App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Half Past Blue WatchKit 1 App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		174095DE1BB7894B00A350BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
-		174095E01BB7894B00A350BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		174095E21BB7894B00A350BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		174FCA931BB9126E009909F0 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		1790FD111BB49B4D00C2A21E /* Half Past Blue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Half Past Blue.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1790FD141BB49B4D00C2A21E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1790FD191BB49B4D00C2A21E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -107,13 +77,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		174095C61BB7894B00A350BD /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		1790FD0E1BB49B4D00C2A21E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -138,36 +101,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		174095CA1BB7894B00A350BD /* WatchKit 1 Extension */ = {
-			isa = PBXGroup;
-			children = (
-				174095CD1BB7894B00A350BD /* InterfaceController.swift */,
-				174095D11BB7894B00A350BD /* GlanceController.swift */,
-				174095D31BB7894B00A350BD /* Assets.xcassets */,
-				174095D51BB7894B00A350BD /* Info.plist */,
-				174095CB1BB7894B00A350BD /* Supporting Files */,
-			);
-			path = "WatchKit 1 Extension";
-			sourceTree = "<group>";
-		};
-		174095CB1BB7894B00A350BD /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				174095CC1BB7894B00A350BD /* PushNotificationPayload.apns */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		174095DC1BB7894B00A350BD /* WatchKit 1 App */ = {
-			isa = PBXGroup;
-			children = (
-				174095DD1BB7894B00A350BD /* Interface.storyboard */,
-				174095E01BB7894B00A350BD /* Assets.xcassets */,
-				174095E21BB7894B00A350BD /* Info.plist */,
-			);
-			path = "WatchKit 1 App";
-			sourceTree = "<group>";
-		};
 		1790FD081BB49B4D00C2A21E = {
 			isa = PBXGroup;
 			children = (
@@ -185,8 +118,6 @@
 				1790FD111BB49B4D00C2A21E /* Half Past Blue.app */,
 				1790FD251BB49B4D00C2A21E /* unit tests.xctest */,
 				1790FD301BB49B4D00C2A21E /* ui tests.xctest */,
-				174095C91BB7894B00A350BD /* Half Past Blue WatchKit 1 Extension.appex */,
-				174095D81BB7894B00A350BD /* Half Past Blue WatchKit 1 App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -194,8 +125,6 @@
 		1790FD131BB49B4D00C2A21E /* _src */ = {
 			isa = PBXGroup;
 			children = (
-				174095CA1BB7894B00A350BD /* WatchKit 1 Extension */,
-				174095DC1BB7894B00A350BD /* WatchKit 1 App */,
 				1790FD141BB49B4D00C2A21E /* AppDelegate.swift */,
 				1790FD4C1BB4B69700C2A21E /* ColorClockViewController.swift */,
 				170229C41BB739DD0073F634 /* ColorManager.swift */,
@@ -203,6 +132,7 @@
 				1790FD4E1BB4C49D00C2A21E /* UIColor+Hexadecimal.swift */,
 				1790FD501BB4E1F800C2A21E /* UIColor+IsLightColor.swift */,
 				1790FD521BB4E42F00C2A21E /* Clamp.swift */,
+				174FCA931BB9126E009909F0 /* Logger.swift */,
 				1790FD421BB49C3700C2A21E /* storyboards */,
 				1790FD451BB49C4500C2A21E /* resources */,
 				1790FD431BB49C4500C2A21E /* other sources */,
@@ -268,39 +198,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		174095C81BB7894B00A350BD /* Half Past Blue WatchKit 1 Extension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 174095EB1BB7894B00A350BD /* Build configuration list for PBXNativeTarget "Half Past Blue WatchKit 1 Extension" */;
-			buildPhases = (
-				174095C51BB7894B00A350BD /* Sources */,
-				174095C61BB7894B00A350BD /* Frameworks */,
-				174095C71BB7894B00A350BD /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				174095DB1BB7894B00A350BD /* PBXTargetDependency */,
-			);
-			name = "Half Past Blue WatchKit 1 Extension";
-			productName = "Half Past Blue WatchKit 1 Extension";
-			productReference = 174095C91BB7894B00A350BD /* Half Past Blue WatchKit 1 Extension.appex */;
-			productType = "com.apple.product-type.watchkit-extension";
-		};
-		174095D71BB7894B00A350BD /* Half Past Blue WatchKit 1 App */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 174095EA1BB7894B00A350BD /* Build configuration list for PBXNativeTarget "Half Past Blue WatchKit 1 App" */;
-			buildPhases = (
-				174095D61BB7894B00A350BD /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Half Past Blue WatchKit 1 App";
-			productName = "Half Past Blue WatchKit 1 App";
-			productReference = 174095D81BB7894B00A350BD /* Half Past Blue WatchKit 1 App.app */;
-			productType = "com.apple.product-type.application.watchapp";
-		};
 		1790FD101BB49B4D00C2A21E /* Half Past Blue */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1790FD391BB49B4D00C2A21E /* Build configuration list for PBXNativeTarget "Half Past Blue" */;
@@ -313,7 +210,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				174095E41BB7894B00A350BD /* PBXTargetDependency */,
 			);
 			name = "Half Past Blue";
 			productName = "color clock";
@@ -365,13 +261,6 @@
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "DasHutch Development";
 				TargetAttributes = {
-					174095C81BB7894B00A350BD = {
-						CreatedOnToolsVersion = 7.0;
-						DevelopmentTeam = WPZ6H96R6K;
-					};
-					174095D71BB7894B00A350BD = {
-						CreatedOnToolsVersion = 7.0;
-					};
 					1790FD101BB49B4D00C2A21E = {
 						CreatedOnToolsVersion = 7.0;
 						DevelopmentTeam = WPZ6H96R6K;
@@ -400,8 +289,6 @@
 			projectRoot = "";
 			targets = (
 				1790FD101BB49B4D00C2A21E /* Half Past Blue */,
-				174095D71BB7894B00A350BD /* Half Past Blue WatchKit 1 App */,
-				174095C81BB7894B00A350BD /* Half Past Blue WatchKit 1 Extension */,
 				1790FD241BB49B4D00C2A21E /* unit tests */,
 				1790FD2F1BB49B4D00C2A21E /* ui tests */,
 			);
@@ -409,24 +296,6 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		174095C71BB7894B00A350BD /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				174095D91BB7894B00A350BD /* Half Past Blue WatchKit 1 App.app in Resources */,
-				174095D41BB7894B00A350BD /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		174095D61BB7894B00A350BD /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				174095E11BB7894B00A350BD /* Assets.xcassets in Resources */,
-				174095DF1BB7894B00A350BD /* Interface.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		1790FD0F1BB49B4D00C2A21E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -454,15 +323,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		174095C51BB7894B00A350BD /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				174095CE1BB7894B00A350BD /* InterfaceController.swift in Sources */,
-				174095D21BB7894B00A350BD /* GlanceController.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		1790FD0D1BB49B4D00C2A21E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -471,6 +331,7 @@
 				1790FD531BB4E42F00C2A21E /* Clamp.swift in Sources */,
 				1790FD4F1BB4C49D00C2A21E /* UIColor+Hexadecimal.swift in Sources */,
 				1790FD551BB6012600C2A21E /* Clock.swift in Sources */,
+				174FCA941BB9126E009909F0 /* Logger.swift in Sources */,
 				1790FD151BB49B4D00C2A21E /* AppDelegate.swift in Sources */,
 				1790FD511BB4E1F800C2A21E /* UIColor+IsLightColor.swift in Sources */,
 				1790FD4B1BB49C6100C2A21E /* XCGLogger.swift in Sources */,
@@ -497,16 +358,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		174095DB1BB7894B00A350BD /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 174095D71BB7894B00A350BD /* Half Past Blue WatchKit 1 App */;
-			targetProxy = 174095DA1BB7894B00A350BD /* PBXContainerItemProxy */;
-		};
-		174095E41BB7894B00A350BD /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 174095C81BB7894B00A350BD /* Half Past Blue WatchKit 1 Extension */;
-			targetProxy = 174095E31BB7894B00A350BD /* PBXContainerItemProxy */;
-		};
 		1790FD271BB49B4D00C2A21E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 1790FD101BB49B4D00C2A21E /* Half Past Blue */;
@@ -520,14 +371,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		174095DD1BB7894B00A350BD /* Interface.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				174095DE1BB7894B00A350BD /* Base */,
-			);
-			name = Interface.storyboard;
-			sourceTree = "<group>";
-		};
 		1790FD181BB49B4D00C2A21E /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -547,68 +390,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		174095E61BB7894B00A350BD /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
-				ENABLE_BITCODE = NO;
-				INFOPLIST_FILE = "$(SRCROOT)/app/_src/WatchKit 1 Extension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.dashutchdevelopment.colorclock.watchkitextension;
-				PRODUCT_NAME = "${TARGET_NAME}";
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		174095E71BB7894B00A350BD /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
-				ENABLE_BITCODE = NO;
-				INFOPLIST_FILE = "$(SRCROOT)/app/_src/WatchKit 1 Extension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.dashutchdevelopment.colorclock.watchkitextension;
-				PRODUCT_NAME = "${TARGET_NAME}";
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		174095E81BB7894B00A350BD /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
-				ENABLE_BITCODE = NO;
-				IBSC_MODULE = Half_Past_Blue_WatchKit_1_Extension;
-				INFOPLIST_FILE = "$(SRCROOT)/app/_src/WatchKit 1 App/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
-				PRODUCT_BUNDLE_IDENTIFIER = com.dashutchdevelopment.colorclock.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = 4;
-				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
-			};
-			name = Debug;
-		};
-		174095E91BB7894B00A350BD /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
-				ENABLE_BITCODE = NO;
-				IBSC_MODULE = Half_Past_Blue_WatchKit_1_Extension;
-				INFOPLIST_FILE = "$(SRCROOT)/app/_src/WatchKit 1 App/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
-				PRODUCT_BUNDLE_IDENTIFIER = com.dashutchdevelopment.colorclock.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = 4;
-				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
-			};
-			name = Release;
-		};
 		1790FD371BB49B4D00C2A21E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -645,7 +426,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -684,7 +465,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -773,24 +554,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		174095EA1BB7894B00A350BD /* Build configuration list for PBXNativeTarget "Half Past Blue WatchKit 1 App" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				174095E81BB7894B00A350BD /* Debug */,
-				174095E91BB7894B00A350BD /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		174095EB1BB7894B00A350BD /* Build configuration list for PBXNativeTarget "Half Past Blue WatchKit 1 Extension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				174095E61BB7894B00A350BD /* Debug */,
-				174095E71BB7894B00A350BD /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		1790FD0C1BB49B4D00C2A21E /* Build configuration list for PBXProject "color clock" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
