@@ -14,17 +14,20 @@ import Foundation
 //      based on build - set log level (verbose, warn, error, etc)
 let log = XCGLogger.defaultInstance()
 
-class Logger {
+struct Logger {
     
-    class func setup() {
+    init() {
+        setup()
+    }
+    
+    private func setup() {
 
         let env = NSProcessInfo.processInfo().environment
         if env["environment"] == "development" {
             
             //NOTE: Development environment, use 'verbose` log level
             log.setup(.Verbose, showLogLevel: true, showFileNames: true, showLineNumbers: true, writeToFile: nil, fileLogLevel: nil)
-            
-        } else {
+        }else {
             
             //NOTE: Production environment, use 'warning` log level
             log.setup(.Warning, showLogLevel: true, showFileNames: true, showLineNumbers: true, writeToFile: nil, fileLogLevel: nil)

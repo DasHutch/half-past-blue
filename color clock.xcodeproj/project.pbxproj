@@ -101,6 +101,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		174FCA961BB9A5A2009909F0 /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1790FD4E1BB4C49D00C2A21E /* UIColor+Hexadecimal.swift */,
+				1790FD501BB4E1F800C2A21E /* UIColor+IsLightColor.swift */,
+			);
+			path = extensions;
+			sourceTree = "<group>";
+		};
+		174FCA971BB9A5CB009909F0 /* global functions */ = {
+			isa = PBXGroup;
+			children = (
+				1790FD521BB4E42F00C2A21E /* Clamp.swift */,
+			);
+			path = "global functions";
+			sourceTree = "<group>";
+		};
+		174FCA981BB9A5F2009909F0 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				170229C41BB739DD0073F634 /* ColorManager.swift */,
+				1790FD541BB6012600C2A21E /* Clock.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		174FCA991BB9A60A009909F0 /* color clock */ = {
+			isa = PBXGroup;
+			children = (
+				1790FD4C1BB4B69700C2A21E /* ColorClockViewController.swift */,
+			);
+			path = "color clock";
+			sourceTree = "<group>";
+		};
 		1790FD081BB49B4D00C2A21E = {
 			isa = PBXGroup;
 			children = (
@@ -126,13 +160,11 @@
 			isa = PBXGroup;
 			children = (
 				1790FD141BB49B4D00C2A21E /* AppDelegate.swift */,
-				1790FD4C1BB4B69700C2A21E /* ColorClockViewController.swift */,
-				170229C41BB739DD0073F634 /* ColorManager.swift */,
-				1790FD541BB6012600C2A21E /* Clock.swift */,
-				1790FD4E1BB4C49D00C2A21E /* UIColor+Hexadecimal.swift */,
-				1790FD501BB4E1F800C2A21E /* UIColor+IsLightColor.swift */,
-				1790FD521BB4E42F00C2A21E /* Clamp.swift */,
 				174FCA931BB9126E009909F0 /* Logger.swift */,
+				174FCA991BB9A60A009909F0 /* color clock */,
+				174FCA981BB9A5F2009909F0 /* models */,
+				174FCA971BB9A5CB009909F0 /* global functions */,
+				174FCA961BB9A5A2009909F0 /* extensions */,
 				1790FD421BB49C3700C2A21E /* storyboards */,
 				1790FD451BB49C4500C2A21E /* resources */,
 				1790FD431BB49C4500C2A21E /* other sources */,
