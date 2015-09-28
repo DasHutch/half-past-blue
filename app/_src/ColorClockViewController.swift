@@ -26,11 +26,11 @@ class ColorClockViewController: UIViewController {
     
     lazy var displayLink = CADisplayLink()
     let clock: Clock = Clock()
-
+    
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         configAndRunDisplayLink()
     }
     
