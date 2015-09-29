@@ -7,3 +7,7 @@
 //
 
 import Foundation
+
+struct UserDefaultsKeys {
+    static let UseHexColorsKey = "use_hex_colors"
+}

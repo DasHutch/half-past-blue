@@ -17,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
     
         setupLogging()
+        registerUserDefaults()
         return true
     }
 
@@ -40,5 +41,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //USE:  the global `log` anywhere in app to
         //      log various messages, info, warning, errors, etc
         let _ = Logger()
+    }
+    
+    //MARK: UserDefaults
+    private func registerUserDefaults() {
+        
+        let appDefaults = [UserDefaultsKeys.UseHexColorsKey : NSNumber(bool: false)]
+        NSUserDefaults.standardUserDefaults().registerDefaults(appDefaults)
+        NSUserDefaults.standardUserDefaults().synchronize()
     }
 }
