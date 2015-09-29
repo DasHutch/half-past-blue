@@ -57,33 +57,35 @@
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lYc-pc-MVH" userLabel="9 o'clock divider">
-                                                <rect key="frame" x="0.0" y="296" width="88" height="8"/>
+                                                <rect key="frame" x="0.0" y="298" width="88" height="4"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="88" id="cug-JV-1Qv"/>
-                                                    <constraint firstAttribute="height" constant="8" id="dEo-dX-YaJ"/>
+                                                    <constraint firstAttribute="height" constant="4" id="dEo-dX-YaJ"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tuk-QL-DA0" userLabel="12 o'clock divider">
-                                                <rect key="frame" x="296" y="0.0" width="8" height="88"/>
+                                                <rect key="frame" x="298" y="0.0" width="4" height="88"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="8" id="SFZ-49-aqL"/>
+                                                    <constraint firstAttribute="width" constant="4" id="SFZ-49-aqL"/>
                                                     <constraint firstAttribute="height" constant="88" id="X67-dG-c0n"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jju-Nm-8kj" userLabel="3 o'clock divider">
-                                                <rect key="frame" x="512" y="296" width="88" height="8"/>
+                                                <rect key="frame" x="512" y="298" width="88" height="4"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zhu-4A-ILX" userLabel="6 o'clock divider">
-                                                <rect key="frame" x="296" y="512" width="8" height="88"/>
+                                                <rect key="frame" x="298" y="512" width="4" height="88"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2P9-Mg-lbZ" userLabel="clock hands" customClass="AnalogClockFaceView" customModule="Half_Past_Blue" customModuleProvider="target">
                                                 <rect key="frame" x="96" y="96" width="408" height="408"/>
+                                                <gestureRecognizers/>
                                             </view>
                                         </subviews>
+                                        <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstItem="2P9-Mg-lbZ" firstAttribute="top" secondItem="Tuk-QL-DA0" secondAttribute="bottom" constant="8" id="8hf-RR-h4e"/>
                                             <constraint firstAttribute="bottom" secondItem="Zhu-4A-ILX" secondAttribute="bottom" id="9pj-WU-CC0"/>
@@ -102,9 +104,16 @@
                                             <constraint firstItem="Zhu-4A-ILX" firstAttribute="height" secondItem="Tuk-QL-DA0" secondAttribute="height" id="xkx-rz-FU6"/>
                                             <constraint firstItem="lYc-pc-MVH" firstAttribute="leading" secondItem="Zf1-Ix-8DI" secondAttribute="leading" id="zPL-m3-oiT"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="nineOClockMarker" destination="lYc-pc-MVH" id="j7s-19-hEn"/>
+                                            <outlet property="sixOClockMarker" destination="Zhu-4A-ILX" id="lCa-eR-nsf"/>
+                                            <outlet property="threeOClockMarker" destination="Jju-Nm-8kj" id="qPd-lX-lAt"/>
+                                            <outlet property="twelveOClockMarker" destination="Tuk-QL-DA0" id="USm-GN-bDe"/>
+                                        </connections>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="Zf1-Ix-8DI" secondAttribute="trailing" id="5Tl-tE-8J7"/>
                                     <constraint firstAttribute="bottom" secondItem="y0W-gS-hMB" secondAttribute="bottom" id="6Ni-F6-PQP"/>
@@ -118,12 +127,16 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="ay0-tL-qYu" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="4fT-oS-skW"/>
                             <constraint firstItem="ay0-tL-qYu" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="5Ks-G5-q67"/>
                             <constraint firstItem="ay0-tL-qYu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="8PZ-tK-MVr"/>
                             <constraint firstAttribute="trailing" secondItem="ay0-tL-qYu" secondAttribute="trailing" id="ovC-M8-2Ck"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="GOD-D7-d9N" appends="YES" id="5f8-NR-MCp"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="analogClockFace" destination="Zf1-Ix-8DI" id="cJi-qQ-nif"/>
@@ -132,8 +145,13 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer numberOfTapsRequired="2" id="GOD-D7-d9N">
+                    <connections>
+                        <action selector="handleDoubleTap:" destination="BYZ-38-t0r" id="I5j-fC-QKD"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="459" y="387"/>
+            <point key="canvasLocation" x="582" y="393"/>
         </scene>
     </scenes>
 </document>
