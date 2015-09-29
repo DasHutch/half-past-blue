@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		170229C51BB739DD0073F634 /* ColorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170229C41BB739DD0073F634 /* ColorManager.swift */; settings = {ASSET_TAGS = (); }; };
+		174FCA941BB9126E009909F0 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174FCA931BB9126E009909F0 /* Logger.swift */; settings = {ASSET_TAGS = (); }; };
+		174FCA9B1BB9B4F1009909F0 /* AnalogClockFaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174FCA9A1BB9B4F1009909F0 /* AnalogClockFaceView.swift */; settings = {ASSET_TAGS = (); }; };
+		174FCA9D1BB9B51D009909F0 /* DigitalClockFaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174FCA9C1BB9B51D009909F0 /* DigitalClockFaceView.swift */; settings = {ASSET_TAGS = (); }; };
+		174FCA9F1BBA1A85009909F0 /* Degree2Radians.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174FCA9E1BBA1A85009909F0 /* Degree2Radians.swift */; settings = {ASSET_TAGS = (); }; };
 		1790FD151BB49B4D00C2A21E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1790FD141BB49B4D00C2A21E /* AppDelegate.swift */; };
 		1790FD1A1BB49B4D00C2A21E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1790FD181BB49B4D00C2A21E /* Main.storyboard */; };
 		1790FD1F1BB49B4D00C2A21E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1790FD1D1BB49B4D00C2A21E /* LaunchScreen.storyboard */; };
@@ -39,8 +43,25 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		174095EC1BB7894B00A350BD /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		170229C41BB739DD0073F634 /* ColorManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorManager.swift; sourceTree = "<group>"; };
+		174FCA931BB9126E009909F0 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		174FCA9A1BB9B4F1009909F0 /* AnalogClockFaceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalogClockFaceView.swift; sourceTree = "<group>"; };
+		174FCA9C1BB9B51D009909F0 /* DigitalClockFaceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DigitalClockFaceView.swift; sourceTree = "<group>"; };
+		174FCA9E1BBA1A85009909F0 /* Degree2Radians.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Degree2Radians.swift; sourceTree = "<group>"; };
 		1790FD111BB49B4D00C2A21E /* Half Past Blue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Half Past Blue.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1790FD141BB49B4D00C2A21E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1790FD191BB49B4D00C2A21E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -86,6 +107,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		174FCA961BB9A5A2009909F0 /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1790FD4E1BB4C49D00C2A21E /* UIColor+Hexadecimal.swift */,
+				1790FD501BB4E1F800C2A21E /* UIColor+IsLightColor.swift */,
+			);
+			path = extensions;
+			sourceTree = "<group>";
+		};
+		174FCA971BB9A5CB009909F0 /* global functions */ = {
+			isa = PBXGroup;
+			children = (
+				1790FD521BB4E42F00C2A21E /* Clamp.swift */,
+				174FCA9E1BBA1A85009909F0 /* Degree2Radians.swift */,
+			);
+			path = "global functions";
+			sourceTree = "<group>";
+		};
+		174FCA981BB9A5F2009909F0 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				170229C41BB739DD0073F634 /* ColorManager.swift */,
+				1790FD541BB6012600C2A21E /* Clock.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		174FCA991BB9A60A009909F0 /* color clock */ = {
+			isa = PBXGroup;
+			children = (
+				1790FD4C1BB4B69700C2A21E /* ColorClockViewController.swift */,
+				174FCA9A1BB9B4F1009909F0 /* AnalogClockFaceView.swift */,
+				174FCA9C1BB9B51D009909F0 /* DigitalClockFaceView.swift */,
+			);
+			path = "color clock";
+			sourceTree = "<group>";
+		};
 		1790FD081BB49B4D00C2A21E = {
 			isa = PBXGroup;
 			children = (
@@ -111,12 +169,11 @@
 			isa = PBXGroup;
 			children = (
 				1790FD141BB49B4D00C2A21E /* AppDelegate.swift */,
-				1790FD4C1BB4B69700C2A21E /* ColorClockViewController.swift */,
-				170229C41BB739DD0073F634 /* ColorManager.swift */,
-				1790FD541BB6012600C2A21E /* Clock.swift */,
-				1790FD4E1BB4C49D00C2A21E /* UIColor+Hexadecimal.swift */,
-				1790FD501BB4E1F800C2A21E /* UIColor+IsLightColor.swift */,
-				1790FD521BB4E42F00C2A21E /* Clamp.swift */,
+				174FCA931BB9126E009909F0 /* Logger.swift */,
+				174FCA991BB9A60A009909F0 /* color clock */,
+				174FCA981BB9A5F2009909F0 /* models */,
+				174FCA971BB9A5CB009909F0 /* global functions */,
+				174FCA961BB9A5A2009909F0 /* extensions */,
 				1790FD421BB49C3700C2A21E /* storyboards */,
 				1790FD451BB49C4500C2A21E /* resources */,
 				1790FD431BB49C4500C2A21E /* other sources */,
@@ -189,6 +246,7 @@
 				1790FD0D1BB49B4D00C2A21E /* Sources */,
 				1790FD0E1BB49B4D00C2A21E /* Frameworks */,
 				1790FD0F1BB49B4D00C2A21E /* Resources */,
+				174095EC1BB7894B00A350BD /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
@@ -310,10 +368,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				174FCA9B1BB9B4F1009909F0 /* AnalogClockFaceView.swift in Sources */,
 				1790FD4D1BB4B69700C2A21E /* ColorClockViewController.swift in Sources */,
 				1790FD531BB4E42F00C2A21E /* Clamp.swift in Sources */,
 				1790FD4F1BB4C49D00C2A21E /* UIColor+Hexadecimal.swift in Sources */,
 				1790FD551BB6012600C2A21E /* Clock.swift in Sources */,
+				174FCA9D1BB9B51D009909F0 /* DigitalClockFaceView.swift in Sources */,
+				174FCA941BB9126E009909F0 /* Logger.swift in Sources */,
+				174FCA9F1BBA1A85009909F0 /* Degree2Radians.swift in Sources */,
 				1790FD151BB49B4D00C2A21E /* AppDelegate.swift in Sources */,
 				1790FD511BB4E1F800C2A21E /* UIColor+IsLightColor.swift in Sources */,
 				1790FD4B1BB49C6100C2A21E /* XCGLogger.swift in Sources */,
@@ -408,7 +470,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -447,7 +509,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
