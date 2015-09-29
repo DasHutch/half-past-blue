@@ -8,11 +8,12 @@ Looking at using the Hours to cycle through the Hue, Minutes to Adjust Brightnes
 Digital Clock Face and Analog Clock Face, with simple interaction reveal the color information for a given time.
 
 ## TODO:
-- Analog Clock Face
-- Double Tap to change clock face
+- ~~Analog Clock Face~~
+- ~~Double Tap to change clock face~~
+- ~~Setting in Settings app to switch to using Hexadecimal Colors vs HSB Colors~~
 - Single Tap 'bounce' or something like an Alert to educate on swapping digital / analog
 - UI for displaying Color info at a given time
-- ColorManager Class for handling color choices from a NSDate
+- ~~ColorManager Class for handling color choices from a NSDate~~
 - ~~Use MonoSpace font~~
 - Use Custom MonoSpace Font
 - ~~Hide Status Bar~~

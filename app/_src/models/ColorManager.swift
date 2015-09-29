@@ -22,6 +22,32 @@ class ColorManager: NSObject {
     
     func colorForHours(hours: Int, minutes: Int, seconds: Int) -> UIColor {
         
+        //TODO: Check Settings UserDefaults value for use_hex_colors Bool
+        // Get user preference
+        let defaults = NSUserDefaults.standardUserDefaults()
+        let shouldUseHexColors = defaults.boolForKey(UserDefaultsKeys.UseHexColorsKey)
+        
+        if shouldUseHexColors {
+            return hexColorForHours(hours, minutes: minutes, seconds: seconds)
+        }else {
+            return hsbColorForHours(hours, minutes: minutes, seconds: seconds)
+        }
+    }
+    
+    //MARK: - Private
+    private func hexColorForHours(hours: Int, minutes: Int, seconds: Int) -> UIColor {
+        
+        let redFromHours = hours
+        let greenFromMinutes = minutes
+        let blueFromSeconds = minutes
+        
+        let colorForTime = UIColor(rgba: "#\(redFromHours)\(greenFromMinutes)\(blueFromSeconds)")
+        
+        return colorForTime
+    }
+    
+    private func hsbColorForHours(hours: Int, minutes: Int, seconds: Int) -> UIColor {
+        
         let hueFromHours = adjustedHueValueFromHour(hours)
         let brightnessFromMinutes = adjustedBrightnessValueFromMinute(minutes)
         let saturationFromSeconds = adjustedSaturationValueFromSecond(seconds)
@@ -31,7 +57,6 @@ class ColorManager: NSObject {
         return colorForTime
     }
     
-    //MARK: - Private
     private func adjustedHueValueFromHour(currentHour: Int) -> CGFloat {
         
         let hoursDivisor: CGFloat = 24.0
