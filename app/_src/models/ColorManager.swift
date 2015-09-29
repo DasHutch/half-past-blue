@@ -13,6 +13,10 @@ class ColorManager: NSObject {
     
     //MARK: - Public
     func contrastingFontColorForColor(color: UIColor) -> UIColor {
+        return contrastingLightOrDarkColorForColor(color)
+    }
+    
+    func contrastingLightOrDarkColorForColor(color: UIColor) -> UIColor {
         return color.isLight() ? UIColor.darkTextColor() : UIColor.lightTextColor()
     }
     
