@@ -10,10 +10,9 @@ Digital Clock Face and Analog Clock Face, with simple interaction reveal the col
 ## TODO:
 - ~~Analog Clock Face~~
 - ~~Double Tap to change clock face~~
-- Gesture to hide the clock completely
-- Setting for hidden clock to reveal on the hour or minute or maybe like on the 15 minutes? (fade in / out)
+- Add Setting for Fading Clock out & Reveal every 5 mins
 - ~~Setting in Settings app to switch to using Hexadecimal Colors vs HSB Colors~~
-- Single Tap 'bounce' or something like an Alert to educate on swapping digital / analog
+- Single Tap 'bounce' like an Alert to educate on swapping clock faces
 - UI for displaying Color info at a given time
 - ~~ColorManager Class for handling color choices from a NSDate~~
 - ~~Use MonoSpace font~~
