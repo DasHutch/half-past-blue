@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import iAd
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,6 +19,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
         setupLogging()
         registerUserDefaults()
+        
+        setupIAds()
+        setupInAppPurchases()
         return true
     }
 
@@ -46,8 +50,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     //MARK: UserDefaults
     private func registerUserDefaults() {
         
-        let appDefaults = [UserDefaultsKeys.UseHexColorsKey : NSNumber(bool: false)]
+        let appDefaults = [
+            UserDefaultsKeys.UseHexColors : NSNumber(bool: false),
+            UserDefaultsKeys.PrimaryClock: NSNumber(integer: ClockTypes.Digital.rawValue),
+            UserDefaultsKeys.FadeClockFaces: NSNumber(bool: false)
+        ]
         NSUserDefaults.standardUserDefaults().registerDefaults(appDefaults)
         NSUserDefaults.standardUserDefaults().synchronize()
+    }
+    
+    //MARK: iAds
+    private func setupIAds() {
+    }
+    
+    //MARK: In-App Purchases
+    private func setupInAppPurchases() {
+        InAppPurchaseManager.sharedManager.loadStore()
     }
 }
