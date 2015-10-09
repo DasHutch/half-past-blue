@@ -46,7 +46,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     //MARK: UserDefaults
     private func registerUserDefaults() {
         
-        let appDefaults = [UserDefaultsKeys.UseHexColorsKey : NSNumber(bool: false)]
+        let appDefaults = [
+            UserDefaultsKeys.UseHexColors : NSNumber(bool: false),
+            UserDefaultsKeys.FadeClockFaces : NSNumber(bool: false),
+            UserDefaultsKeys.PrimaryClock : NSNumber(integer: ClockTypes.Digital.rawValue),
+        ]
         NSUserDefaults.standardUserDefaults().registerDefaults(appDefaults)
         NSUserDefaults.standardUserDefaults().synchronize()
     }
