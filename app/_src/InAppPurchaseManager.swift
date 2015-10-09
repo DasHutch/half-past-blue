@@ -131,9 +131,7 @@ class InAppPurchaseManager: NSObject {
             return
         }
         
-        recordTransaction(originalTransaction)
-        provideContent(originalTransaction.payment.productIdentifier)
-        finishTransaction(transaction, wasSuccessful:true)
+        completeTransaction(originalTransaction)
     }
     
     /// called when the transaction was successful
@@ -205,10 +203,15 @@ class InAppPurchaseManager: NSObject {
 extension InAppPurchaseManager {
     private func provideContent(productId: String) {
         
-        if productId == ProductIdentifiers.SmallTip {
-            //NOTE: enable the pro features
-            //            [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"isProUpgradePurchased" ];
-            //            [[NSUserDefaults standardUserDefaults] synchronize];
+        //????: Is this the best way to handle this?
+        //      should this be stored more securely (keychain?)
+    
+        if productId == ProductIdentifiers.SmallTip ||
+           productId == ProductIdentifiers.MediumTip ||
+           productId == ProductIdentifiers.LargeTip {
+            
+            NSUserDefaults.standardUserDefaults().setBool(true, forKey: "isRemoveAdsPurchased")
+            NSUserDefaults.standardUserDefaults().synchronize()
         }
     }
 }
