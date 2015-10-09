@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Color Clock-->
@@ -125,29 +126,52 @@
                                     <constraint firstAttribute="bottom" secondItem="Zf1-Ix-8DI" secondAttribute="bottom" id="w22-rC-bim"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoDark" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8GW-SL-pEV" userLabel="Info Button">
+                                <rect key="frame" x="558" y="567" width="22" height="22"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <connections>
+                                    <action selector="handleInfoButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dww-lx-54h"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="ay0-tL-qYu" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="4fT-oS-skW"/>
-                            <constraint firstItem="ay0-tL-qYu" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="5Ks-G5-q67"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="8GW-SL-pEV" secondAttribute="bottom" constant="8" id="6fj-9b-ufg"/>
                             <constraint firstItem="ay0-tL-qYu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="8PZ-tK-MVr"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ay0-tL-qYu" secondAttribute="bottom" id="QxL-Uv-vny"/>
+                            <constraint firstAttribute="trailing" secondItem="8GW-SL-pEV" secondAttribute="trailing" constant="20" symbolic="YES" id="cGU-rC-Sug"/>
                             <constraint firstAttribute="trailing" secondItem="ay0-tL-qYu" secondAttribute="trailing" id="ovC-M8-2Ck"/>
+                            <constraint firstItem="8GW-SL-pEV" firstAttribute="top" secondItem="ay0-tL-qYu" secondAttribute="bottom" constant="-33" id="rg0-qV-8ck"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="6fj-9b-ufg"/>
+                            </mask>
+                        </variation>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="GOD-D7-d9N" appends="YES" id="5f8-NR-MCp"/>
+                            <outletCollection property="gestureRecognizers" destination="O7e-HJ-eSa" appends="YES" id="4xV-PN-fso"/>
                         </connections>
                     </view>
                     <connections>
                         <outlet property="analogClockFace" destination="Zf1-Ix-8DI" id="cJi-qQ-nif"/>
                         <outlet property="colorView" destination="ay0-tL-qYu" id="MZb-Rb-SRk"/>
+                        <outlet property="colorViewBottomConstraint" destination="QxL-Uv-vny" id="Vhw-Vu-3e8"/>
                         <outlet property="digitalClockFace" destination="y0W-gS-hMB" id="BS9-k8-HCz"/>
+                        <outlet property="infoButton" destination="8GW-SL-pEV" id="SIq-i8-1du"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer numberOfTapsRequired="2" id="GOD-D7-d9N">
+                <tapGestureRecognizer numberOfTapsRequired="2" id="GOD-D7-d9N" userLabel="DoubleTap">
                     <connections>
                         <action selector="handleDoubleTap:" destination="BYZ-38-t0r" id="I5j-fC-QKD"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="O7e-HJ-eSa" userLabel="SingleTap">
+                    <connections>
+                        <action selector="handleSingleTap:" destination="BYZ-38-t0r" id="tAj-QW-P6v"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
