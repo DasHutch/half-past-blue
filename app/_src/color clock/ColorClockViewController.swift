@@ -128,6 +128,21 @@ class ColorClockViewController: UIViewController {
 
     // MARK: - Private
     private func configAdBanner() {
+        
+        //NOTE: Check if already purchased - remove ads
+        let isRemoveAdsPurchased = NSUserDefaults.standardUserDefaults().boolForKey("isRemoveAdsPurchased")
+        if isRemoveAdsPurchased {
+            log.info("User has already purchased - remove ads. Do NOT show them")
+            return
+        }
+        
+        //NOTE: Err on side of caution, if products cannot be retrieved
+        //      do not show ads at all
+        if InAppPurchaseManager.sharedManager.products?.count > 0 {
+            log.info("Products have not been downloaded yet, erring on side of UX and do not show ads")
+            return
+        }
+        
         adBanner = ADBannerView(adType: ADAdType.Banner)
         
         if adBanner != nil {
