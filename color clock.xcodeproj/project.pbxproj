@@ -30,6 +30,7 @@
 		1790FD511BB4E1F800C2A21E /* UIColor+IsLightColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1790FD501BB4E1F800C2A21E /* UIColor+IsLightColor.swift */; settings = {ASSET_TAGS = (); }; };
 		1790FD531BB4E42F00C2A21E /* Clamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1790FD521BB4E42F00C2A21E /* Clamp.swift */; settings = {ASSET_TAGS = (); }; };
 		1790FD551BB6012600C2A21E /* Clock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1790FD541BB6012600C2A21E /* Clock.swift */; settings = {ASSET_TAGS = (); }; };
+		17973EB21BC840C5008ECCCC /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17973EB11BC840C5008ECCCC /* StoreKit.framework */; };
 		17E6223F1BBA2C13002B6064 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E6223E1BBA2C13002B6064 /* Constants.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
@@ -93,6 +94,7 @@
 		1790FD501BB4E1F800C2A21E /* UIColor+IsLightColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+IsLightColor.swift"; sourceTree = "<group>"; };
 		1790FD521BB4E42F00C2A21E /* Clamp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Clamp.swift; sourceTree = "<group>"; };
 		1790FD541BB6012600C2A21E /* Clock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Clock.swift; sourceTree = "<group>"; };
+		17973EB11BC840C5008ECCCC /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		17E6223E1BBA2C13002B6064 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -101,6 +103,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17973EB21BC840C5008ECCCC /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -170,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				1790FD131BB49B4D00C2A21E /* _src */,
+				17973EB31BC840D3008ECCCC /* _frameworks */,
 				1790FD491BB49C4C00C2A21E /* _vendor */,
 				1790FD281BB49B4D00C2A21E /* unit tests */,
 				1790FD331BB49B4D00C2A21E /* ui tests */,
@@ -265,6 +269,14 @@
 			path = app/_vendor;
 			sourceTree = "<group>";
 		};
+		17973EB31BC840D3008ECCCC /* _frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				17973EB11BC840C5008ECCCC /* StoreKit.framework */,
+			);
+			name = _frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -334,6 +346,11 @@
 					1790FD101BB49B4D00C2A21E = {
 						CreatedOnToolsVersion = 7.0;
 						DevelopmentTeam = WPZ6H96R6K;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
+						};
 					};
 					1790FD241BB49B4D00C2A21E = {
 						CreatedOnToolsVersion = 7.0;
@@ -566,6 +583,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "$(PROJECT_DIR)/app/_src/other sources/Info.plist";
@@ -573,6 +591,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dashutchdevelopment.colorclock;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -581,6 +600,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "$(PROJECT_DIR)/app/_src/other sources/Info.plist";
@@ -588,6 +608,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dashutchdevelopment.colorclock;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
