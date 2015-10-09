@@ -22,10 +22,9 @@ class ColorManager: NSObject {
     
     func colorForHours(hours: Int, minutes: Int, seconds: Int) -> UIColor {
         
-        //TODO: Check Settings UserDefaults value for use_hex_colors Bool
         // Get user preference
         let defaults = NSUserDefaults.standardUserDefaults()
-        let shouldUseHexColors = defaults.boolForKey(UserDefaultsKeys.UseHexColorsKey)
+        let shouldUseHexColors = defaults.boolForKey(UserDefaultsKeys.UseHexColors)
         
         if shouldUseHexColors {
             return hexColorForHours(hours, minutes: minutes, seconds: seconds)
