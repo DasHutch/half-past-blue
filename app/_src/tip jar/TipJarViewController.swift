@@ -11,6 +11,14 @@ import UIKit
 //TODO: Implement Payment Notifications and display ui for purchasing, purchased, failed, etc
 class TipJarViewController: UIViewController {
 
+    @IBOutlet weak var tipJarHeaderLabel: UILabel!
+    @IBOutlet weak var tipJarBodyLabel: UILabel!
+    @IBOutlet weak var tipJarDetailsLabel: UILabel!
+    @IBOutlet weak var tipJarCaptionLabel: UILabel!
+    @IBOutlet weak var smallTipTitleLabel: UILabel!
+    @IBOutlet weak var mediumTipTitleLabel: UILabel!
+    @IBOutlet weak var largeTipTitleLabel: UILabel!
+    
     @IBOutlet weak var cancelButton: UIButton!
     
     @IBOutlet weak var restorePurchasesButton: UIButton!
@@ -28,6 +36,7 @@ class TipJarViewController: UIViewController {
     var iappfnObserver: NSObjectProtocol?
     var iaprpcnObserver: NSObjectProtocol?
     var iappdnenObserver: NSObjectProtocol?
+    var csdcObserver: NSObjectProtocol?
     
     //MARK: - Lifecycle
     override func viewWillAppear(animated: Bool) {
@@ -87,6 +96,10 @@ class TipJarViewController: UIViewController {
     
     //MARK: - Private 
     private func configNotifications() {
+        csdcObserver = notificationCenter.addObserverForName(UIContentSizeCategoryDidChangeNotification, object: nil, queue: nil) { (notification) -> Void in
+            self.prepareLabelsWithUIFontTextStyle()
+        }
+        
         iaprpcnObserver = notificationCenter.addObserverForName(InAppPurchaseManagerNotifications.RestorePurchasesCompleted, object: nil, queue: nil) { (notification) -> Void in
             
             log.verbose("Received \(InAppPurchaseManagerNotifications.RestorePurchasesCompleted)")
@@ -159,6 +172,10 @@ class TipJarViewController: UIViewController {
     }
     
     private func deconfigNotifications() {
+        if csdcObserver != nil {
+            notificationCenter.removeObserver(csdcObserver!)
+        }
+        
         if iaprpcnObserver != nil {
             notificationCenter.removeObserver(iaprpcnObserver!)
         }
@@ -181,6 +198,20 @@ class TipJarViewController: UIViewController {
     }
     
     //MARK: Update UI
+    private func prepareLabelsWithUIFontTextStyle() {
+        prepareLabel(tipJarHeaderLabel, withFontTextStyle: UIFontTextStyleHeadline)
+        prepareLabel(tipJarBodyLabel, withFontTextStyle: UIFontTextStyleBody)
+        prepareLabel(tipJarDetailsLabel, withFontTextStyle: UIFontTextStyleCaption1)
+        prepareLabel(tipJarCaptionLabel, withFontTextStyle: UIFontTextStyleCaption1)
+        prepareLabel(smallTipTitleLabel, withFontTextStyle: UIFontTextStyleFootnote)
+        prepareLabel(mediumTipTitleLabel, withFontTextStyle: UIFontTextStyleFootnote)
+        prepareLabel(largeTipTitleLabel, withFontTextStyle: UIFontTextStyleFootnote)
+    }
+    
+    private func prepareLabel(label: UILabel, withFontTextStyle textStyle: String) {
+        label.font = UIFont.preferredFontForTextStyle(textStyle)
+    }
+    
     private func updateUIForFinishedStoreKitTransations() {
         
         //NOTE: Turn of Netowrk Indicator(s)

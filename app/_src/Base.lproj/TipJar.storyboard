@@ -25,7 +25,7 @@
                                     <constraint firstAttribute="height" constant="1" id="XV1-OT-8V2"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bAR-J2-IGU">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bAR-J2-IGU">
                                 <rect key="frame" x="485" y="79" width="95" height="26"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                 <state key="normal" title="restore purchases"/>
@@ -46,7 +46,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Any tip given will also remove all advertisements from the app." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5YD-16-F1d">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Any tip given will also remove all advertisements from the app." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="5YD-16-F1d">
                                 <rect key="frame" x="20" y="183" width="560" height="13.5"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -223,9 +223,16 @@
                     <connections>
                         <outlet property="cancelButton" destination="DZH-nZ-ueK" id="Q5Z-rr-2en"/>
                         <outlet property="largeTipButton" destination="1dL-Yx-nfs" id="R0U-UR-Wgi"/>
+                        <outlet property="largeTipTitleLabel" destination="232-O4-Kge" id="qjc-tc-WPU"/>
                         <outlet property="mediumTipButton" destination="jYE-UZ-gov" id="FuS-9v-tB7"/>
+                        <outlet property="mediumTipTitleLabel" destination="Dc1-eE-ZJr" id="z9n-bd-jlu"/>
                         <outlet property="restorePurchasesButton" destination="bAR-J2-IGU" id="cAv-2Y-c16"/>
                         <outlet property="smallTipButton" destination="XK2-Oo-gMu" id="sfd-zP-Abv"/>
+                        <outlet property="smallTipTitleLabel" destination="BQQ-Zt-GTl" id="nXA-xb-y2N"/>
+                        <outlet property="tipJarBodyLabel" destination="mub-Wb-wEp" id="srf-kg-E1H"/>
+                        <outlet property="tipJarCaptionLabel" destination="Vcg-tf-SDX" id="nw6-lh-7Gk"/>
+                        <outlet property="tipJarDetailsLabel" destination="5YD-16-F1d" id="i56-qN-FBt"/>
+                        <outlet property="tipJarHeaderLabel" destination="iKA-Wa-SVp" id="MAj-dF-rxP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xbU-V0-3aD" userLabel="First Responder" sceneMemberID="firstResponder"/>
