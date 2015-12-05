@@ -9,8 +9,8 @@
 import Foundation
 import UIKit
 
+///Returns the input value (as degrees) to radians.
 func degree2radian(a: CGFloat) -> CGFloat {
-    
     let b = CGFloat(M_PI) * a / 180
     return b
 }
