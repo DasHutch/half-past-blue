@@ -1,157 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9Lx-wr-Sbp">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
     </dependencies>
     <scenes>
-        <!--Color Clock-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Clocks View Controller-->
+        <scene sceneID="dxO-Jm-Tfu">
             <objects>
-                <viewController storyboardIdentifier="color_clock_vc" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" userLabel="Color Clock" customClass="ColorClockViewController" customModule="Half_Past_Blue" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" restorationIdentifier="color_background" translatesAutoresizingMaskIntoConstraints="NO" id="ay0-tL-qYu" userLabel=" color view">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" restorationIdentifier="digital_clock_face" translatesAutoresizingMaskIntoConstraints="NO" id="y0W-gS-hMB" userLabel="digital clock face" customClass="DigitalClockFaceView" customModule="Half_Past_Blue" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="HH:MM:SS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h4n-yL-4fS">
-                                                <rect key="frame" x="20" y="242" width="560" height="116.5"/>
-                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="100"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstItem="h4n-yL-4fS" firstAttribute="baseline" secondItem="y0W-gS-hMB" secondAttribute="centerY" id="4oY-xY-gpu"/>
-                                            <constraint firstAttribute="trailing" secondItem="h4n-yL-4fS" secondAttribute="trailing" constant="20" id="c51-50-WsT"/>
-                                            <constraint firstItem="h4n-yL-4fS" firstAttribute="leading" secondItem="y0W-gS-hMB" secondAttribute="leading" constant="20" id="kHL-t0-YQR"/>
-                                            <constraint firstItem="h4n-yL-4fS" firstAttribute="centerY" secondItem="y0W-gS-hMB" secondAttribute="centerY" id="vDy-3e-Z6P"/>
-                                        </constraints>
-                                        <variation key="default">
-                                            <mask key="constraints">
-                                                <exclude reference="4oY-xY-gpu"/>
-                                            </mask>
-                                        </variation>
-                                        <variation key="widthClass=compact">
-                                            <mask key="constraints">
-                                                <include reference="4oY-xY-gpu"/>
-                                                <include reference="kHL-t0-YQR"/>
-                                                <exclude reference="vDy-3e-Z6P"/>
-                                            </mask>
-                                        </variation>
-                                        <connections>
-                                            <outlet property="currentDateLabel" destination="h4n-yL-4fS" id="3O0-8D-mHA"/>
-                                        </connections>
-                                    </view>
-                                    <view hidden="YES" contentMode="scaleToFill" restorationIdentifier="analog_clock_face" translatesAutoresizingMaskIntoConstraints="NO" id="Zf1-Ix-8DI" userLabel="analog clock face" customClass="AnalogClockFaceView" customModule="Half_Past_Blue" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                        <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lYc-pc-MVH" userLabel="9 o'clock divider">
-                                                <rect key="frame" x="0.0" y="298" width="88" height="4"/>
-                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="88" id="cug-JV-1Qv"/>
-                                                    <constraint firstAttribute="height" constant="4" id="dEo-dX-YaJ"/>
-                                                </constraints>
-                                            </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tuk-QL-DA0" userLabel="12 o'clock divider">
-                                                <rect key="frame" x="298" y="0.0" width="4" height="88"/>
-                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="4" id="SFZ-49-aqL"/>
-                                                    <constraint firstAttribute="height" constant="88" id="X67-dG-c0n"/>
-                                                </constraints>
-                                            </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jju-Nm-8kj" userLabel="3 o'clock divider">
-                                                <rect key="frame" x="512" y="298" width="88" height="4"/>
-                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                            </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zhu-4A-ILX" userLabel="6 o'clock divider">
-                                                <rect key="frame" x="298" y="512" width="4" height="88"/>
-                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                            </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2P9-Mg-lbZ" userLabel="clock hands" customClass="AnalogClockFaceView" customModule="Half_Past_Blue" customModuleProvider="target">
-                                                <rect key="frame" x="96" y="96" width="408" height="408"/>
-                                                <gestureRecognizers/>
-                                            </view>
-                                        </subviews>
-                                        <gestureRecognizers/>
-                                        <constraints>
-                                            <constraint firstItem="2P9-Mg-lbZ" firstAttribute="top" secondItem="Tuk-QL-DA0" secondAttribute="bottom" constant="8" id="8hf-RR-h4e"/>
-                                            <constraint firstAttribute="bottom" secondItem="Zhu-4A-ILX" secondAttribute="bottom" id="9pj-WU-CC0"/>
-                                            <constraint firstAttribute="trailing" secondItem="Jju-Nm-8kj" secondAttribute="trailing" id="JeW-zv-dUy"/>
-                                            <constraint firstItem="Jju-Nm-8kj" firstAttribute="height" secondItem="lYc-pc-MVH" secondAttribute="height" id="Jvd-ff-PvA"/>
-                                            <constraint firstItem="Jju-Nm-8kj" firstAttribute="width" secondItem="lYc-pc-MVH" secondAttribute="width" id="K50-yE-CuU"/>
-                                            <constraint firstItem="Tuk-QL-DA0" firstAttribute="top" secondItem="Zf1-Ix-8DI" secondAttribute="top" id="KnU-9r-XXM"/>
-                                            <constraint firstItem="Jju-Nm-8kj" firstAttribute="centerY" secondItem="Zf1-Ix-8DI" secondAttribute="centerY" id="PAN-C2-eu9"/>
-                                            <constraint firstItem="Zhu-4A-ILX" firstAttribute="top" secondItem="2P9-Mg-lbZ" secondAttribute="bottom" constant="8" id="Pni-EC-K6C"/>
-                                            <constraint firstItem="lYc-pc-MVH" firstAttribute="centerY" secondItem="Zf1-Ix-8DI" secondAttribute="centerY" id="WI1-Qv-Eo1"/>
-                                            <constraint firstItem="Tuk-QL-DA0" firstAttribute="centerX" secondItem="Zf1-Ix-8DI" secondAttribute="centerX" id="c7u-E7-wG6"/>
-                                            <constraint firstItem="Zhu-4A-ILX" firstAttribute="centerX" secondItem="Zf1-Ix-8DI" secondAttribute="centerX" id="dVV-Gw-quw"/>
-                                            <constraint firstItem="2P9-Mg-lbZ" firstAttribute="leading" secondItem="lYc-pc-MVH" secondAttribute="trailing" constant="8" id="erN-EG-ZJA"/>
-                                            <constraint firstItem="Zhu-4A-ILX" firstAttribute="width" secondItem="Tuk-QL-DA0" secondAttribute="width" id="hej-kC-zoW"/>
-                                            <constraint firstItem="Jju-Nm-8kj" firstAttribute="leading" secondItem="2P9-Mg-lbZ" secondAttribute="trailing" constant="8" id="kn0-07-e1T"/>
-                                            <constraint firstItem="Zhu-4A-ILX" firstAttribute="height" secondItem="Tuk-QL-DA0" secondAttribute="height" id="xkx-rz-FU6"/>
-                                            <constraint firstItem="lYc-pc-MVH" firstAttribute="leading" secondItem="Zf1-Ix-8DI" secondAttribute="leading" id="zPL-m3-oiT"/>
-                                        </constraints>
-                                        <connections>
-                                            <outlet property="nineOClockMarker" destination="lYc-pc-MVH" id="j7s-19-hEn"/>
-                                            <outlet property="sixOClockMarker" destination="Zhu-4A-ILX" id="lCa-eR-nsf"/>
-                                            <outlet property="threeOClockMarker" destination="Jju-Nm-8kj" id="qPd-lX-lAt"/>
-                                            <outlet property="twelveOClockMarker" destination="Tuk-QL-DA0" id="USm-GN-bDe"/>
-                                        </connections>
-                                    </view>
-                                </subviews>
-                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
-                                <gestureRecognizers/>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="Zf1-Ix-8DI" secondAttribute="trailing" id="5Tl-tE-8J7"/>
-                                    <constraint firstAttribute="bottom" secondItem="y0W-gS-hMB" secondAttribute="bottom" id="6Ni-F6-PQP"/>
-                                    <constraint firstAttribute="trailing" secondItem="y0W-gS-hMB" secondAttribute="trailing" id="9R8-24-5Rs"/>
-                                    <constraint firstItem="Zf1-Ix-8DI" firstAttribute="leading" secondItem="ay0-tL-qYu" secondAttribute="leading" id="PT0-Gi-QSt"/>
-                                    <constraint firstItem="y0W-gS-hMB" firstAttribute="top" secondItem="ay0-tL-qYu" secondAttribute="top" id="S7k-qZ-Wii"/>
-                                    <constraint firstItem="y0W-gS-hMB" firstAttribute="leading" secondItem="ay0-tL-qYu" secondAttribute="leading" id="cfE-hR-ddQ"/>
-                                    <constraint firstItem="Zf1-Ix-8DI" firstAttribute="top" secondItem="ay0-tL-qYu" secondAttribute="top" id="tfm-16-aBi"/>
-                                    <constraint firstAttribute="bottom" secondItem="Zf1-Ix-8DI" secondAttribute="bottom" id="w22-rC-bim"/>
-                                </constraints>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <gestureRecognizers/>
-                        <constraints>
-                            <constraint firstItem="ay0-tL-qYu" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="4fT-oS-skW"/>
-                            <constraint firstItem="ay0-tL-qYu" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="5Ks-G5-q67"/>
-                            <constraint firstItem="ay0-tL-qYu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="8PZ-tK-MVr"/>
-                            <constraint firstAttribute="trailing" secondItem="ay0-tL-qYu" secondAttribute="trailing" id="ovC-M8-2Ck"/>
-                        </constraints>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="GOD-D7-d9N" appends="YES" id="5f8-NR-MCp"/>
-                        </connections>
-                    </view>
-                    <connections>
-                        <outlet property="analogClockFace" destination="Zf1-Ix-8DI" id="cJi-qQ-nif"/>
-                        <outlet property="colorView" destination="ay0-tL-qYu" id="MZb-Rb-SRk"/>
-                        <outlet property="digitalClockFace" destination="y0W-gS-hMB" id="BS9-k8-HCz"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer numberOfTapsRequired="2" id="GOD-D7-d9N">
-                    <connections>
-                        <action selector="handleDoubleTap:" destination="BYZ-38-t0r" id="I5j-fC-QKD"/>
-                    </connections>
-                </tapGestureRecognizer>
+                <pageViewController storyboardIdentifier="clocks_vc" autoresizesArchivedViewToFullSize="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="9Lx-wr-Sbp" customClass="ClocksViewController" customModule="Half_Past_Blue" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Eoa-X7-rM9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="582" y="393"/>
+            <point key="canvasLocation" x="1222" y="139"/>
         </scene>
     </scenes>
 </document>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bGy-kF-D6i">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <scenes>
+        <!--Analog Color Clock-->
+        <scene sceneID="p3z-FH-DoR">
+            <objects>
+                <viewController storyboardIdentifier="analog_color_clock_vc" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bGy-kF-D6i" userLabel="Analog Color Clock" customClass="AnalogColorClockViewController" customModule="Half_Past_Blue" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5tQ-zB-m6m"/>
+                        <viewControllerLayoutGuide type="bottom" id="fgw-xZ-suG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="z4p-KS-2Ka">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" restorationIdentifier="color_background" translatesAutoresizingMaskIntoConstraints="NO" id="hmp-Fp-hMi" userLabel=" color view">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" restorationIdentifier="analog_clock_face" translatesAutoresizingMaskIntoConstraints="NO" id="qRX-5Y-0Z1" userLabel="analog clock face" customClass="AnalogClockFaceView" customModule="Half_Past_Blue" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w7W-cv-ITM" userLabel="9 o'clock divider">
+                                                <rect key="frame" x="0.0" y="298" width="88" height="4"/>
+                                                <animations/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="4" id="62q-ge-pOj"/>
+                                                    <constraint firstAttribute="width" constant="88" id="kBO-Hi-e1V"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a7Z-dU-APb" userLabel="12 o'clock divider">
+                                                <rect key="frame" x="298" y="0.0" width="4" height="88"/>
+                                                <animations/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="88" id="eMQ-cN-JJz"/>
+                                                    <constraint firstAttribute="width" constant="4" id="pZz-lx-u5b"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Izg-RQ-81H" userLabel="3 o'clock divider">
+                                                <rect key="frame" x="512" y="298" width="88" height="4"/>
+                                                <animations/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7ud-a0-UMO" userLabel="6 o'clock divider">
+                                                <rect key="frame" x="298" y="512" width="4" height="88"/>
+                                                <animations/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NWk-Xu-MTc" userLabel="clock hands">
+                                                <rect key="frame" x="96" y="96" width="408" height="408"/>
+                                                <animations/>
+                                                <gestureRecognizers/>
+                                            </view>
+                                        </subviews>
+                                        <animations/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstItem="NWk-Xu-MTc" firstAttribute="leading" secondItem="w7W-cv-ITM" secondAttribute="trailing" constant="8" id="4m8-7t-YHP"/>
+                                            <constraint firstItem="Izg-RQ-81H" firstAttribute="width" secondItem="w7W-cv-ITM" secondAttribute="width" id="7zs-zD-Tas"/>
+                                            <constraint firstItem="w7W-cv-ITM" firstAttribute="leading" secondItem="qRX-5Y-0Z1" secondAttribute="leading" id="A9g-Mo-V6N"/>
+                                            <constraint firstItem="w7W-cv-ITM" firstAttribute="centerY" secondItem="qRX-5Y-0Z1" secondAttribute="centerY" id="GKX-M2-GhT"/>
+                                            <constraint firstItem="NWk-Xu-MTc" firstAttribute="top" secondItem="a7Z-dU-APb" secondAttribute="bottom" constant="8" id="HM7-QH-Scu"/>
+                                            <constraint firstItem="Izg-RQ-81H" firstAttribute="centerY" secondItem="qRX-5Y-0Z1" secondAttribute="centerY" id="Jyt-Xg-HN3"/>
+                                            <constraint firstItem="7ud-a0-UMO" firstAttribute="top" secondItem="NWk-Xu-MTc" secondAttribute="bottom" constant="8" id="ME3-Nt-MQ4"/>
+                                            <constraint firstItem="7ud-a0-UMO" firstAttribute="height" secondItem="a7Z-dU-APb" secondAttribute="height" id="MLS-WK-gO4"/>
+                                            <constraint firstAttribute="trailing" secondItem="Izg-RQ-81H" secondAttribute="trailing" id="U2R-Ly-idA"/>
+                                            <constraint firstItem="a7Z-dU-APb" firstAttribute="top" secondItem="qRX-5Y-0Z1" secondAttribute="top" id="Ux7-FS-lwC"/>
+                                            <constraint firstItem="Izg-RQ-81H" firstAttribute="leading" secondItem="NWk-Xu-MTc" secondAttribute="trailing" constant="8" id="Xcn-sB-xl5"/>
+                                            <constraint firstAttribute="bottom" secondItem="7ud-a0-UMO" secondAttribute="bottom" id="a6M-o5-4D7"/>
+                                            <constraint firstItem="7ud-a0-UMO" firstAttribute="width" secondItem="a7Z-dU-APb" secondAttribute="width" id="ejf-4T-Pq1"/>
+                                            <constraint firstItem="a7Z-dU-APb" firstAttribute="centerX" secondItem="qRX-5Y-0Z1" secondAttribute="centerX" id="fT9-T7-scV"/>
+                                            <constraint firstItem="7ud-a0-UMO" firstAttribute="centerX" secondItem="qRX-5Y-0Z1" secondAttribute="centerX" id="mzx-Hs-lB2"/>
+                                            <constraint firstItem="Izg-RQ-81H" firstAttribute="height" secondItem="w7W-cv-ITM" secondAttribute="height" id="sIt-jj-ICK"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="nineOClockMarker" destination="w7W-cv-ITM" id="flO-cT-3sR"/>
+                                            <outlet property="sixOClockMarker" destination="7ud-a0-UMO" id="zLp-5X-sXZ"/>
+                                            <outlet property="threeOClockMarker" destination="Izg-RQ-81H" id="wzz-ek-x5G"/>
+                                            <outlet property="twelveOClockMarker" destination="a7Z-dU-APb" id="4dB-zd-h45"/>
+                                        </connections>
+                                    </view>
+                                </subviews>
+                                <animations/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstItem="qRX-5Y-0Z1" firstAttribute="top" secondItem="hmp-Fp-hMi" secondAttribute="top" id="654-Ac-Xjx"/>
+                                    <constraint firstAttribute="trailing" secondItem="qRX-5Y-0Z1" secondAttribute="trailing" id="9Jw-09-tTI"/>
+                                    <constraint firstAttribute="bottom" secondItem="qRX-5Y-0Z1" secondAttribute="bottom" id="Fty-fO-Ml5"/>
+                                    <constraint firstItem="qRX-5Y-0Z1" firstAttribute="leading" secondItem="hmp-Fp-hMi" secondAttribute="leading" id="fRc-ge-qdi"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="hmp-Fp-hMi" firstAttribute="leading" secondItem="z4p-KS-2Ka" secondAttribute="leading" id="Rk0-Vp-FYi"/>
+                            <constraint firstItem="hmp-Fp-hMi" firstAttribute="top" secondItem="z4p-KS-2Ka" secondAttribute="top" id="dAo-vS-ZfX"/>
+                            <constraint firstAttribute="trailing" secondItem="hmp-Fp-hMi" secondAttribute="trailing" id="nwW-MS-fmD"/>
+                            <constraint firstItem="hmp-Fp-hMi" firstAttribute="bottom" secondItem="fgw-xZ-suG" secondAttribute="top" id="zem-6l-zzD"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="analogClockFace" destination="qRX-5Y-0Z1" id="bym-yK-GpF"/>
+                        <outlet property="colorView" destination="hmp-Fp-hMi" id="g1t-hi-VH6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XNR-La-PHN" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1222" y="793"/>
+        </scene>
+    </scenes>
+</document>
