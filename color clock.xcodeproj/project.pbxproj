@@ -7,25 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		170229C51BB739DD0073F634 /* ColorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170229C41BB739DD0073F634 /* ColorManager.swift */; settings = {ASSET_TAGS = (); }; };
-		170700681BBA280000E0BF9D /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 170700671BBA280000E0BF9D /* Settings.bundle */; settings = {ASSET_TAGS = (); }; };
-		174FCA941BB9126E009909F0 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174FCA931BB9126E009909F0 /* Logger.swift */; settings = {ASSET_TAGS = (); }; };
-		174FCA9B1BB9B4F1009909F0 /* AnalogClockFaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174FCA9A1BB9B4F1009909F0 /* AnalogClockFaceView.swift */; settings = {ASSET_TAGS = (); }; };
-		174FCA9D1BB9B51D009909F0 /* DigitalClockFaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174FCA9C1BB9B51D009909F0 /* DigitalClockFaceView.swift */; settings = {ASSET_TAGS = (); }; };
-		174FCA9F1BBA1A85009909F0 /* Degree2Radians.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174FCA9E1BBA1A85009909F0 /* Degree2Radians.swift */; settings = {ASSET_TAGS = (); }; };
+		170229C51BB739DD0073F634 /* ColorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170229C41BB739DD0073F634 /* ColorManager.swift */; };
+		170700681BBA280000E0BF9D /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 170700671BBA280000E0BF9D /* Settings.bundle */; };
+		174FCA941BB9126E009909F0 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174FCA931BB9126E009909F0 /* Logger.swift */; };
+		174FCA9B1BB9B4F1009909F0 /* AnalogClockFaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174FCA9A1BB9B4F1009909F0 /* AnalogClockFaceView.swift */; };
+		174FCA9D1BB9B51D009909F0 /* DigitalClockFaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174FCA9C1BB9B51D009909F0 /* DigitalClockFaceView.swift */; };
+		174FCA9F1BBA1A85009909F0 /* Degree2Radians.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174FCA9E1BBA1A85009909F0 /* Degree2Radians.swift */; };
 		1790FD151BB49B4D00C2A21E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1790FD141BB49B4D00C2A21E /* AppDelegate.swift */; };
 		1790FD1A1BB49B4D00C2A21E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1790FD181BB49B4D00C2A21E /* Main.storyboard */; };
 		1790FD1F1BB49B4D00C2A21E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1790FD1D1BB49B4D00C2A21E /* LaunchScreen.storyboard */; };
 		1790FD2A1BB49B4D00C2A21E /* color_clockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1790FD291BB49B4D00C2A21E /* color_clockTests.swift */; };
 		1790FD351BB49B4D00C2A21E /* color_clockUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1790FD341BB49B4D00C2A21E /* color_clockUITests.swift */; };
-		1790FD481BB49C4500C2A21E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1790FD461BB49C4500C2A21E /* Assets.xcassets */; settings = {ASSET_TAGS = (); }; };
-		1790FD4B1BB49C6100C2A21E /* XCGLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1790FD4A1BB49C6100C2A21E /* XCGLogger.swift */; settings = {ASSET_TAGS = (); }; };
-		1790FD4D1BB4B69700C2A21E /* ColorClockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1790FD4C1BB4B69700C2A21E /* ColorClockViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		1790FD4F1BB4C49D00C2A21E /* UIColor+Hexadecimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1790FD4E1BB4C49D00C2A21E /* UIColor+Hexadecimal.swift */; settings = {ASSET_TAGS = (); }; };
-		1790FD511BB4E1F800C2A21E /* UIColor+IsLightColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1790FD501BB4E1F800C2A21E /* UIColor+IsLightColor.swift */; settings = {ASSET_TAGS = (); }; };
-		1790FD531BB4E42F00C2A21E /* Clamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1790FD521BB4E42F00C2A21E /* Clamp.swift */; settings = {ASSET_TAGS = (); }; };
-		1790FD551BB6012600C2A21E /* Clock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1790FD541BB6012600C2A21E /* Clock.swift */; settings = {ASSET_TAGS = (); }; };
-		17E6223F1BBA2C13002B6064 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E6223E1BBA2C13002B6064 /* Constants.swift */; settings = {ASSET_TAGS = (); }; };
+		1790FD481BB49C4500C2A21E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1790FD461BB49C4500C2A21E /* Assets.xcassets */; };
+		1790FD4B1BB49C6100C2A21E /* XCGLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1790FD4A1BB49C6100C2A21E /* XCGLogger.swift */; };
+		1790FD4D1BB4B69700C2A21E /* NoneColorClockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1790FD4C1BB4B69700C2A21E /* NoneColorClockViewController.swift */; };
+		1790FD4F1BB4C49D00C2A21E /* UIColor+Hexadecimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1790FD4E1BB4C49D00C2A21E /* UIColor+Hexadecimal.swift */; };
+		1790FD511BB4E1F800C2A21E /* UIColor+IsLightColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1790FD501BB4E1F800C2A21E /* UIColor+IsLightColor.swift */; };
+		1790FD531BB4E42F00C2A21E /* Clamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1790FD521BB4E42F00C2A21E /* Clamp.swift */; };
+		1790FD551BB6012600C2A21E /* Clock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1790FD541BB6012600C2A21E /* Clock.swift */; };
+		17D554771C136E3B005FCA47 /* AppDelegate+Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D554761C136E3B005FCA47 /* AppDelegate+Logging.swift */; };
+		17D554791C136EE7005FCA47 /* AppDelegate+UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D554781C136EE7005FCA47 /* AppDelegate+UserDefaults.swift */; };
+		17D5547B1C136FEB005FCA47 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D5547A1C136FEB005FCA47 /* UserDefaults.swift */; };
+		17D5547D1C13705B005FCA47 /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D5547C1C13705B005FCA47 /* Storyboards.swift */; };
+		17D5547F1C137089005FCA47 /* Segues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D5547E1C137089005FCA47 /* Segues.swift */; };
+		17D554811C13743C005FCA47 /* ClocksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D554801C13743C005FCA47 /* ClocksViewController.swift */; };
+		17D554831C137A31005FCA47 /* AnalogClock.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17D554821C137A31005FCA47 /* AnalogClock.storyboard */; };
+		17D554861C137CF6005FCA47 /* DigitalClock.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17D554841C137CF6005FCA47 /* DigitalClock.storyboard */; };
+		17D554881C137D80005FCA47 /* DigitalClockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D554871C137D80005FCA47 /* DigitalClockViewController.swift */; };
+		17D5548A1C137D90005FCA47 /* AnalogClockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D554891C137D90005FCA47 /* AnalogClockViewController.swift */; };
+		17D5548D1C1387DA005FCA47 /* NoneClock.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17D5548B1C1387DA005FCA47 /* NoneClock.storyboard */; };
+		17E6223F1BBA2C13002B6064 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E6223E1BBA2C13002B6064 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,11 +89,22 @@
 		1790FD441BB49C4500C2A21E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1790FD461BB49C4500C2A21E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1790FD4A1BB49C6100C2A21E /* XCGLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCGLogger.swift; sourceTree = "<group>"; };
-		1790FD4C1BB4B69700C2A21E /* ColorClockViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorClockViewController.swift; sourceTree = "<group>"; };
+		1790FD4C1BB4B69700C2A21E /* NoneColorClockViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoneColorClockViewController.swift; sourceTree = "<group>"; };
 		1790FD4E1BB4C49D00C2A21E /* UIColor+Hexadecimal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Hexadecimal.swift"; sourceTree = "<group>"; };
 		1790FD501BB4E1F800C2A21E /* UIColor+IsLightColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+IsLightColor.swift"; sourceTree = "<group>"; };
 		1790FD521BB4E42F00C2A21E /* Clamp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Clamp.swift; sourceTree = "<group>"; };
 		1790FD541BB6012600C2A21E /* Clock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Clock.swift; sourceTree = "<group>"; };
+		17D554761C136E3B005FCA47 /* AppDelegate+Logging.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Logging.swift"; sourceTree = "<group>"; };
+		17D554781C136EE7005FCA47 /* AppDelegate+UserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppDelegate+UserDefaults.swift"; sourceTree = "<group>"; };
+		17D5547A1C136FEB005FCA47 /* UserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
+		17D5547C1C13705B005FCA47 /* Storyboards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
+		17D5547E1C137089005FCA47 /* Segues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Segues.swift; sourceTree = "<group>"; };
+		17D554801C13743C005FCA47 /* ClocksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClocksViewController.swift; sourceTree = "<group>"; };
+		17D554821C137A31005FCA47 /* AnalogClock.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = AnalogClock.storyboard; path = Base.lproj/AnalogClock.storyboard; sourceTree = "<group>"; };
+		17D554851C137CF6005FCA47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/DigitalClock.storyboard; sourceTree = "<group>"; };
+		17D554871C137D80005FCA47 /* DigitalClockViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DigitalClockViewController.swift; sourceTree = "<group>"; };
+		17D554891C137D90005FCA47 /* AnalogClockViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalogClockViewController.swift; sourceTree = "<group>"; };
+		17D5548C1C1387DA005FCA47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/NoneClock.storyboard; sourceTree = "<group>"; };
 		17E6223E1BBA2C13002B6064 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -141,9 +163,12 @@
 		174FCA991BB9A60A009909F0 /* color clock */ = {
 			isa = PBXGroup;
 			children = (
-				1790FD4C1BB4B69700C2A21E /* ColorClockViewController.swift */,
-				174FCA9A1BB9B4F1009909F0 /* AnalogClockFaceView.swift */,
+				17D554801C13743C005FCA47 /* ClocksViewController.swift */,
+				1790FD4C1BB4B69700C2A21E /* NoneColorClockViewController.swift */,
+				17D554871C137D80005FCA47 /* DigitalClockViewController.swift */,
 				174FCA9C1BB9B51D009909F0 /* DigitalClockFaceView.swift */,
+				17D554891C137D90005FCA47 /* AnalogClockViewController.swift */,
+				174FCA9A1BB9B4F1009909F0 /* AnalogClockFaceView.swift */,
 			);
 			path = "color clock";
 			sourceTree = "<group>";
@@ -173,8 +198,12 @@
 			isa = PBXGroup;
 			children = (
 				1790FD141BB49B4D00C2A21E /* AppDelegate.swift */,
+				17D554781C136EE7005FCA47 /* AppDelegate+UserDefaults.swift */,
+				17D554761C136E3B005FCA47 /* AppDelegate+Logging.swift */,
 				174FCA931BB9126E009909F0 /* Logger.swift */,
 				17E6223E1BBA2C13002B6064 /* Constants.swift */,
+				17D5547C1C13705B005FCA47 /* Storyboards.swift */,
+				17D5547A1C136FEB005FCA47 /* UserDefaults.swift */,
 				174FCA991BB9A60A009909F0 /* color clock */,
 				174FCA981BB9A5F2009909F0 /* models */,
 				174FCA971BB9A5CB009909F0 /* global functions */,
@@ -183,6 +212,7 @@
 				1790FD451BB49C4500C2A21E /* resources */,
 				1790FD431BB49C4500C2A21E /* other sources */,
 				170700671BBA280000E0BF9D /* Settings.bundle */,
+				17D5547E1C137089005FCA47 /* Segues.swift */,
 			);
 			name = _src;
 			path = app/_src;
@@ -213,6 +243,9 @@
 			children = (
 				1790FD181BB49B4D00C2A21E /* Main.storyboard */,
 				1790FD1D1BB49B4D00C2A21E /* LaunchScreen.storyboard */,
+				17D554821C137A31005FCA47 /* AnalogClock.storyboard */,
+				17D554841C137CF6005FCA47 /* DigitalClock.storyboard */,
+				17D5548B1C1387DA005FCA47 /* NoneClock.storyboard */,
 			);
 			name = storyboards;
 			sourceTree = "<group>";
@@ -349,8 +382,11 @@
 			files = (
 				170700681BBA280000E0BF9D /* Settings.bundle in Resources */,
 				1790FD1F1BB49B4D00C2A21E /* LaunchScreen.storyboard in Resources */,
+				17D5548D1C1387DA005FCA47 /* NoneClock.storyboard in Resources */,
+				17D554861C137CF6005FCA47 /* DigitalClock.storyboard in Resources */,
 				1790FD1A1BB49B4D00C2A21E /* Main.storyboard in Resources */,
 				1790FD481BB49C4500C2A21E /* Assets.xcassets in Resources */,
+				17D554831C137A31005FCA47 /* AnalogClock.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,17 +412,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				174FCA9B1BB9B4F1009909F0 /* AnalogClockFaceView.swift in Sources */,
-				1790FD4D1BB4B69700C2A21E /* ColorClockViewController.swift in Sources */,
+				17D5548A1C137D90005FCA47 /* AnalogClockViewController.swift in Sources */,
+				1790FD4D1BB4B69700C2A21E /* NoneColorClockViewController.swift in Sources */,
 				1790FD531BB4E42F00C2A21E /* Clamp.swift in Sources */,
 				1790FD4F1BB4C49D00C2A21E /* UIColor+Hexadecimal.swift in Sources */,
+				17D5547B1C136FEB005FCA47 /* UserDefaults.swift in Sources */,
 				1790FD551BB6012600C2A21E /* Clock.swift in Sources */,
 				174FCA9D1BB9B51D009909F0 /* DigitalClockFaceView.swift in Sources */,
+				17D5547F1C137089005FCA47 /* Segues.swift in Sources */,
+				17D554881C137D80005FCA47 /* DigitalClockViewController.swift in Sources */,
+				17D5547D1C13705B005FCA47 /* Storyboards.swift in Sources */,
+				17D554771C136E3B005FCA47 /* AppDelegate+Logging.swift in Sources */,
 				174FCA941BB9126E009909F0 /* Logger.swift in Sources */,
 				17E6223F1BBA2C13002B6064 /* Constants.swift in Sources */,
 				174FCA9F1BBA1A85009909F0 /* Degree2Radians.swift in Sources */,
+				17D554791C136EE7005FCA47 /* AppDelegate+UserDefaults.swift in Sources */,
 				1790FD151BB49B4D00C2A21E /* AppDelegate.swift in Sources */,
 				1790FD511BB4E1F800C2A21E /* UIColor+IsLightColor.swift in Sources */,
 				1790FD4B1BB49C6100C2A21E /* XCGLogger.swift in Sources */,
+				17D554811C13743C005FCA47 /* ClocksViewController.swift in Sources */,
 				170229C51BB739DD0073F634 /* ColorManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -437,6 +481,22 @@
 				1790FD1E1BB49B4D00C2A21E /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		17D554841C137CF6005FCA47 /* DigitalClock.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				17D554851C137CF6005FCA47 /* Base */,
+			);
+			name = DigitalClock.storyboard;
+			sourceTree = "<group>";
+		};
+		17D5548B1C1387DA005FCA47 /* NoneClock.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				17D5548C1C1387DA005FCA47 /* Base */,
+			);
+			name = NoneClock.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
