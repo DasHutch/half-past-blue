@@ -8,11 +8,12 @@
 
 import UIKit
 
+@IBDesignable
 class DigitalClockFaceView: UIView {
     
-    @IBOutlet private weak var currentDateLabel: UILabel!
+    @IBOutlet private var currentDateLabel: UILabel!
     
-    //MARK: Public
+//MARK: Public
     func updateCurrentHours(hours: Int, minutes: Int, seconds: Int) {
         let timeString = "\(hours):\(minutes):\(seconds)"
         updateCurrentDateLabel(timeString)
@@ -26,7 +27,7 @@ class DigitalClockFaceView: UIView {
         updateDateLabelTextColorBasedOnColor(color)
     }
     
-    //MARK: - Private
+//MARK: - Private
     private func updateCurrentDateLabel(dateString: String) {
         currentDateLabel.text = dateString
     }

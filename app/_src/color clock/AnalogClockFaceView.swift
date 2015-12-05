@@ -8,12 +8,13 @@
 
 import UIKit
 
+@IBDesignable
 class AnalogClockFaceView: UIView {
     
-    @IBOutlet private weak var twelveOClockMarker: UIView!
-    @IBOutlet private weak var threeOClockMarker: UIView!
-    @IBOutlet private weak var sixOClockMarker: UIView!
-    @IBOutlet private weak var nineOClockMarker: UIView!
+    @IBOutlet private var twelveOClockMarker: UIView!
+    @IBOutlet private var threeOClockMarker: UIView!
+    @IBOutlet private var sixOClockMarker: UIView!
+    @IBOutlet private var nineOClockMarker: UIView!
     
     private struct Time {
         let hours: Int
@@ -38,7 +39,7 @@ class AnalogClockFaceView: UIView {
     var minuteHandLayer: CAShapeLayer?
     var secondHandLayer: CAShapeLayer?
     
-    //MARK: - Lifecycle
+//MARK: - Lifecycle
     override func awakeFromNib() {
         super.awakeFromNib()
         config()
@@ -54,7 +55,15 @@ class AnalogClockFaceView: UIView {
         config()
     }
     
-    //MARK: - Publics
+    override func prepareForInterfaceBuilder() {        
+        //NOTE: Give a fake time & color for IB
+        updateCurrentHours(10, minutes: 23, seconds: 42)
+        
+        //!!!!: Crashes, markerViews are nil (IBOutlets) Why?
+        //updateAnalogClockFaceAndHandsColor(UIColor.blueColor())
+    }
+    
+//MARK: - Public
     func updateCurrentHours(hours: Int, minutes: Int, seconds: Int) {
         
         let currentTime = Time(hours: hours, minutes: minutes, seconds: seconds)
@@ -79,7 +88,7 @@ class AnalogClockFaceView: UIView {
         updateClockFaceMarkersColor(color)
     }
     
-    //MARK: - Private
+//MARK: - Private
     private func config() {}
     
     private func updateClockFaceMarkersColor(color: UIColor) {
