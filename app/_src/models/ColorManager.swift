@@ -11,7 +11,7 @@ import UIKit
 
 class ColorManager: NSObject {
     
-    //MARK: - Public
+//MARK: - Public
     func contrastingFontColorForColor(color: UIColor) -> UIColor {
         return contrastingLightOrDarkColorForColor(color)
     }
@@ -24,7 +24,7 @@ class ColorManager: NSObject {
         
         // Get user preference
         let defaults = NSUserDefaults.standardUserDefaults()
-        let shouldUseHexColors = defaults.boolForKey(UserDefaultsKeys.UseHexColors)
+        let shouldUseHexColors = defaults.boolForKey(UserDefaults.Keys.UseHexColors)
         
         if shouldUseHexColors {
             return hexColorForHours(hours, minutes: minutes, seconds: seconds)
@@ -33,7 +33,7 @@ class ColorManager: NSObject {
         }
     }
     
-    //MARK: - Private
+//MARK: - Private
     private func hexColorForHours(hours: Int, minutes: Int, seconds: Int) -> UIColor {
         
         let redFromHours = hours
