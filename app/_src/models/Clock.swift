@@ -8,6 +8,7 @@
 
 import Foundation
 
+///Clock Object, represents time
 class Clock: NSObject {
     
     var currentDate: NSDate {
@@ -44,7 +45,7 @@ class Clock: NSObject {
         }
     }
     
-    var dateFormatter: NSDateFormatter {
+    private var dateFormatter: NSDateFormatter {
         //????: This is not getting called on didSet in the init func... why?!
         didSet {
             //dateFormatter.timeStyle = .MediumStyle
@@ -58,7 +59,7 @@ class Clock: NSObject {
         }
     }
     
-    //MARK: - Lifecycle
+//MARK: - Lifecycle
     override init() {
         dateFormatter = NSDateFormatter()
         
@@ -72,7 +73,7 @@ class Clock: NSObject {
         dateFormatter.locale = NSLocale.currentLocale()
     }
     
-    //MARK: - Private
+//MARK: - Private
     private func currentDateComponents() -> NSDateComponents {
         
         let unitFlags: NSCalendarUnit = [.Hour, .Minute, .Second]
