@@ -9,6 +9,9 @@
 
 import Foundation
 
+//????: Should probably, remove global `log` and use the `logger` struct
+//      wuth log inside of it to allow us to replace which logging lib we use
+
 //NOTE: Create global 'log' instance
 //      this allows, more refined logging
 //      based on build - set log level (verbose, warn, error, etc)

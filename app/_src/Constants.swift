@@ -8,12 +8,6 @@
 
 import Foundation
 
-struct UserDefaultsKeys {
-    static let UseHexColors = "use_hex_colors"
-    static let PrimaryClock = "primary_clock_face"
-    static let FadeClockFaces = "fade_clock_face"
-}
-
 enum ClockTypes: Int {
     case Digital = 0
     case Analog
